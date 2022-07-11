@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TransLite</string>
+
+    <string-array name="languages">
+        <item>ARABIC</item>
+        <item>BENGALI</item>
+        <item>GERMAN</item>
+        <item>GREEK</item>
+        <item>ENGLISH</item>
+        <item>SPANISH</item>
+        <item>FRENCH</item>
+        <item>HINDI</item>
+        <item>ITALIAN</item>
+        <item>JAPANESE</item>
+        <item>KANNADA</item>
+        <item>KOREAN</item>
+        <item>MARATHI</item>
+        <item>DUTCH</item>
+        <item>PORTUGUESE</item>
+        <item>RUSSIAN</item>
+        <item>TAMIL</item>
+        <item>TELUGU</item>
+        <item>URDU</item>
+        <item>CHINESE</item>
+    </string-array>
+</resources>

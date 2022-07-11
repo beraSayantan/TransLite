@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "438491519935",
+    "project_id": "translite-dac7b",
+    "storage_bucket": "translite-dac7b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:438491519935:android:dec798f4bc422e2a6c5f0a",
+        "android_client_info": {
+          "package_name": "com.beginner.translite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "438491519935-ijlfss30b01hqnuk6evq774n23qp6d85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCv_QA4ONm8JLgT--yXWmNIe2YJNhwHtbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438491519935-ijlfss30b01hqnuk6evq774n23qp6d85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
