@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         mProgressDialog = Dialog(this)
         mProgressDialog.setContentView(R.layout.dialog_progress)
 
+        val selected_lang:TextView =findViewById(R.id.selected_lang)
         val langto:Spinner = findViewById(R.id.lang_to)
         var to_lang:String
         lateinit var to_code:String
@@ -55,6 +56,7 @@ class MainActivity : AppCompatActivity() {
                     if (languageCode == "und") {
                         Toast.makeText(applicationContext, "Can't identify language", Toast.LENGTH_LONG).show()
                     } else {
+                        selected_lang.text = getLang(languageCode)
                         Toast.makeText(applicationContext, "${getLang(languageCode)} language detected", Toast.LENGTH_LONG).show()
                         TakesLcodePutsTheTranslationInTheTV(languageCode, to_code, inputtext, translatedheading)
                     }
@@ -100,6 +102,7 @@ class MainActivity : AppCompatActivity() {
     fun showProgressDialog(text: String){                                                         //WHAT IS THISSS??
         mProgressDialog.findViewById<TextView>(R.id.tv_progress_text).text = text
         mProgressDialog.show()
+        mProgressDialog.setCanceledOnTouchOutside(false)
     }
 
     fun hideProgressDialog() {
