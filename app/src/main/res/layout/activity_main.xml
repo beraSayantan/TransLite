@@ -73,15 +73,15 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Spinner
-        android:id="@+id/lang_from"
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:padding="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toStartOf="@+id/right_arrow"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <Spinner-->
+<!--        android:id="@+id/lang_from"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="72dp"-->
+<!--        android:padding="3dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/right_arrow"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <Button
         android:id="@+id/translate_button"

@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
         mProgressDialog = Dialog(this)
         mProgressDialog.setContentView(R.layout.dialog_progress)
 
-        var lcode = "und"
         val langto:Spinner = findViewById(R.id.lang_to)
-        var to_lang = "HINDI"
+        var to_lang:String
+        lateinit var to_code:String
         val inputtext:TextInputEditText = findViewById(R.id.input_text)
         val translatebutton:Button = findViewById(R.id.translate_button)
         val translatedheading:TextView = findViewById(R.id.translated_heading)
@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         langto.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 to_lang = adapterView?.getItemAtPosition(position).toString()
+                to_code = getLangCode(to_lang)
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 //Not applicable here
@@ -49,34 +50,32 @@ class MainActivity : AppCompatActivity() {
 
             val languageIdentifier = LanguageIdentification.getClient()
             languageIdentifier.identifyLanguage(inputtext.text.toString())
+
                 .addOnSuccessListener { languageCode ->
-                    lcode = languageCode
                     if (languageCode == "und") {
-                        Toast.makeText(applicationContext, "Can't identify language", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext, "Can't identify language", Toast.LENGTH_LONG).show()
                     } else {
-                        Toast.makeText(applicationContext, lcode, Toast.LENGTH_SHORT).show()
-                        TakesLcodePutsTheTranslationInTheTV(lcode, inputtext, translatedheading)
+                        Toast.makeText(applicationContext, "${getLang(languageCode)} language detected", Toast.LENGTH_LONG).show()
+                        TakesLcodePutsTheTranslationInTheTV(languageCode, to_code, inputtext, translatedheading)
                     }
                 }
                 .addOnFailureListener {
                     // Model couldn’t be loaded or other internal error.
                     // ...
                 }
-//
-
         }
-
 
     }
 
     private fun TakesLcodePutsTheTranslationInTheTV(
-        lcode: String,
+        from_code: String,
+        to_code:String,
         inputtext: TextInputEditText,
         translatedheading: TextView
     ) {
         val options = TranslatorOptions.Builder()
-            .setSourceLanguage(TranslateLanguage.fromLanguageTag(lcode)!!)
-            .setTargetLanguage(TranslateLanguage.FINNISH)
+            .setSourceLanguage(TranslateLanguage.fromLanguageTag(from_code)!!)
+            .setTargetLanguage(TranslateLanguage.fromLanguageTag(to_code)!!)
             .build()
 
         val translator = Translation.getClient(options)
@@ -88,10 +87,8 @@ class MainActivity : AppCompatActivity() {
         showProgressDialog("Loading please wait\nIt may take a minute or two")
         translator.downloadModelIfNeeded(conditions)
             .addOnSuccessListener {
-
                 translateFromModelAndPutInTheTextView(translator, inputtext, translatedheading)
                 hideProgressDialog()
-
             }
             .addOnFailureListener { exception ->
                 // Model couldn’t be downloaded or other internal error.
@@ -117,6 +114,61 @@ class MainActivity : AppCompatActivity() {
             .addOnFailureListener { exception ->
             }
     }
+
+    fun getLangCode(lang:String): String {
+        when(lang)
+        {
+            "ARABIC" -> return "ar"
+            "BENGALI" -> return "bn"
+            "CHINESE" -> return "zh"
+            "DUTCH" -> return "nl"
+            "ENGLISH" -> return "en"
+            "FRENCH" -> return "fr"
+            "GERMAN" -> return "de"
+            "GREEK" -> return "el"
+            "HINDI" -> return "hi"
+            "ITALIAN" -> return "it"
+            "JAPANESE" -> return "ja"
+            "KANNADA" -> return "kn"
+            "KOREAN" -> return "ko"
+            "MARATHI" -> return "mr"
+            "PORTUGUESE" -> return "pt"
+            "RUSSIAN" -> return "ru"
+            "SPANISH" -> return "es"
+            "TAMIL" -> return "ta"
+            "TELUGU" -> return "te"
+            "URDU" -> return "ur"
+        }
+        return ""
+    }
+
+    fun getLang(lcode:String): String {
+        when(lcode)
+        {
+            "ar" -> return "ARABIC"
+            "bn" -> return "BENGALI"
+            "zh" -> return "CHINESE"
+            "nl" -> return "DUTCH"
+            "en" -> return "ENGLISH"
+            "fr" -> return "FRENCH"
+            "de" -> return "GERMAN"
+            "el" -> return "GREEK"
+            "hi" -> return "HINDI"
+            "it" -> return "ITALIAN"
+            "ja" -> return "JAPANESE"
+            "kn" -> return "KANNADA"
+            "ko" -> return "KOREAN"
+            "mr" -> return "MARATHI"
+            "pt" -> return "PORTUGUESE"
+            "ru" -> return "RUSSIAN"
+            "es" -> return "SPANISH"
+            "ta" -> return "TAMIL"
+            "te" -> return "TELUGU"
+            "ur" -> return "URDU"
+        }
+        return ""
+    }
 }
+
 
 
