@@ -12,13 +12,13 @@
         android:id="@+id/lang_to"
         android:layout_width="109dp"
         android:layout_height="26dp"
-        android:layout_marginBottom="72dp"
         android:entries="@array/languages"
         android:padding="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/right_arrow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toEndOf="@+id/right_arrow" />
+        app:layout_constraintStart_toEndOf="@+id/right_arrow"
+        app:layout_constraintTop_toTopOf="@+id/right_arrow" />
 
     <TextView
         android:id="@+id/heading"
@@ -73,15 +73,15 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Spinner
-        android:id="@+id/lang_from"
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:padding="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toStartOf="@+id/right_arrow"
-        app:layout_constraintStart_toStartOf="parent" />
+<!--    <Spinner-->
+<!--        android:id="@+id/lang_from"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="72dp"-->
+<!--        android:padding="3dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/right_arrow"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
     <Button
         android:id="@+id/translate_button"
@@ -107,5 +107,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/translate_button"
         app:layout_constraintVertical_bias="0.342" />
+
+    <TextView
+        android:id="@+id/selected_lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AUTO DETECT"
+        app:layout_constraintBottom_toBottomOf="@+id/right_arrow"
+        app:layout_constraintEnd_toStartOf="@+id/right_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/right_arrow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
