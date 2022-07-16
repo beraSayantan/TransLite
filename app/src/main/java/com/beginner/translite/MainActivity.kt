@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         val inputtext:TextInputEditText = findViewById(R.id.input_text)
         val translatebutton:ImageButton = findViewById(R.id.translate_button)
         val translatedheading:TextView = findViewById(R.id.translated_heading)
-
+        
         langto.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 to_lang = adapterView?.getItemAtPosition(position).toString()
