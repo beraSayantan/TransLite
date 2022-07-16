@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.beginner.translite.databinding.Screen1Binding
 import com.google.android.material.textfield.TextInputEditText
 import com.google.mlkit.common.model.DownloadConditions
 import com.google.mlkit.nl.languageid.LanguageIdentification
@@ -20,23 +21,22 @@ import com.google.mlkit.nl.translate.TranslatorOptions
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mProgressDialog: Dialog
+    private lateinit var binding:Screen1Binding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.screen1)
+        binding = Screen1Binding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         mProgressDialog = Dialog(this)
         mProgressDialog.setContentView(R.layout.dialog_progress)
 
-        val selected_lang:TextView =findViewById(R.id.selected_lang)
-        val langto:Spinner = findViewById(R.id.lang_to)
+
         var to_lang:String
         lateinit var to_code:String
-        val inputtext:TextInputEditText = findViewById(R.id.input_text)
-        val translatebutton:ImageButton = findViewById(R.id.translate_button)
-        val translatedheading:TextView = findViewById(R.id.translated_heading)
-        
-        langto.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+        binding.langTo.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 to_lang = adapterView?.getItemAtPosition(position).toString()
                 to_code = getLangCode(to_lang)
@@ -47,18 +47,18 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        translatebutton.setOnClickListener {
+        binding.translateButton.setOnClickListener {
 
             val languageIdentifier = LanguageIdentification.getClient()
-            languageIdentifier.identifyLanguage(inputtext.text.toString())
+            languageIdentifier.identifyLanguage(binding.inputText.text.toString())
 
                 .addOnSuccessListener { languageCode ->
                     if (languageCode == "und") {
                         Toast.makeText(applicationContext, "Can't identify language", Toast.LENGTH_LONG).show()
                     } else {
-                        selected_lang.text = getLang(languageCode)
+                        binding.selectedLang.text = getLang(languageCode)
                         Toast.makeText(applicationContext, "${getLang(languageCode)} language detected", Toast.LENGTH_LONG).show()
-                        TakesLcodePutsTheTranslationInTheTV(languageCode, to_code, inputtext, translatedheading)
+                        TakesLcodePutsTheTranslationInTheTV(languageCode, to_code, binding.inputText, binding.translatedHeading)
                     }
                 }
                 .addOnFailureListener {
