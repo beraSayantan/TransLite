@@ -5,9 +5,9 @@ Revived Hackathon 1
 
 ### About the app
 
-This is a Translation App which identifies the langauge of the entered text and translates into the language which the user selects from the Spinner.
+This is a Translation App which identifies the langauge of the entered text and translates into the language which the user selects from the Spinner. The result is displayed on the TextView below the translate button.
 
-This project has implementation of concepts like ViewBinding as well as sees implementation of Firebase ML Kit.
+This project has implementation of concepts like ViewBinding, APIs,  as well as sees implementation of Firebase ML Kit.
 
 ---
 
