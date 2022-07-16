@@ -34,7 +34,9 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="15dp">
+        tools:layout_editor_absoluteX="15dp"
+        android:gravity="center"
+        >
 
         <TextView
             android:id="@+id/textView6"
@@ -44,6 +46,16 @@
             android:text="Enter text to be translated here"
             android:textSize="28sp" />
 
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="AUTO DETECT"
+            android:layout_margin="15dp"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            />
+
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="60dp"
@@ -52,7 +64,19 @@
             android:background="@drawable/round_button"
             android:contentDescription="Translate"
             android:gravity="center"
-            app:srcCompat="@drawable/translation" />
+            app:srcCompat="@drawable/translation"
+            android:layout_margin="15sp"
+            />
+
+        <Spinner
+            android:id="@+id/lang_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/languages"
+            android:padding="3dp"
+            android:gravity="center"
+            android:layout_margin="15dp"
+            />
 
         <TextView
             android:id="@+id/textView7"
@@ -68,9 +92,12 @@
         android:layout_height="2dp"
         android:layout_marginHorizontal="15dp"
         android:background="#c0c0c0"
-        app:layout_constraintTop_toTopOf="@id/linearLayout2"
         app:layout_constraintBottom_toBottomOf="@id/linearLayout2"
-        app:layout_constraintRight_toRightOf="@id/linearLayout2"/>
+        app:layout_constraintRight_toRightOf="@id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@id/linearLayout2"
+        android:alpha="0.25"
+        />
+
 
     <TextView
         android:id="@+id/textView8"
