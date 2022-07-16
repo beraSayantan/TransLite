@@ -10,8 +10,6 @@ import android.view.View
 import android.widget.*
 import com.beginner.translite.databinding.Screen1Binding
 import com.google.android.material.textfield.TextInputEditText
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import com.google.mlkit.common.model.DownloadConditions
 import com.google.mlkit.nl.languageid.LanguageIdentification
 import com.google.mlkit.nl.translate.TranslateLanguage
@@ -34,9 +32,10 @@ class MainActivity : AppCompatActivity() {
         mProgressDialog = Dialog(this)
         mProgressDialog.setContentView(R.layout.dialog_progress)
 
-
         var to_lang:String
         lateinit var to_code:String
+
+        binding.translatedHeading.visibility=View.INVISIBLE
 
         binding.langTo.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -115,8 +114,8 @@ class MainActivity : AppCompatActivity() {
         translator.translate(inputtext.text.toString())
             .addOnSuccessListener { translatedText ->
                 translatedheading.text = translatedText
+                binding.translatedHeading.visibility= View.VISIBLE
                 translate_query = TransQuery(inputtext.text.toString(),translatedText)
-                Firebase.firestore.collection("Data").add(translate_query)
             }
             .addOnFailureListener { exception ->
             }

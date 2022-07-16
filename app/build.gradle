@@ -50,8 +50,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    //for firestore
-    implementation 'com.google.firebase:firebase-firestore-ktx:24.2.1'
 
     // dependency for firebase core.
     implementation 'com.google.firebase:firebase-core:21.1.0'
