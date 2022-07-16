@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+>
 
     <TextView
         android:id="@+id/translite"
@@ -17,7 +18,7 @@
         android:layout_marginBottom="745dp"
         android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="TransLite"
+        android:text="@string/app_name"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +43,7 @@
             android:layout_height="120dp"
             android:layout_margin="15dp"
             android:gravity="top"
-            android:hint="Enter text to be translated"
+            android:hint="@string/requesting_toenter_text"
             android:textSize="28sp" />
 
         <TextView
@@ -51,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:padding="5dp"
-            android:text="AUTO DETECT"
+            android:text="@string/auto_detect"
             android:textAlignment="center"
             android:textSize="16sp" />
 
@@ -62,7 +63,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_margin="15sp"
             android:background="@drawable/round_button"
-            android:contentDescription="Translate"
+            android:contentDescription="@string/translate"
             android:gravity="center"
             app:srcCompat="@drawable/translation" />
 
@@ -74,14 +75,13 @@
             android:entries="@array/languages"
             android:gravity="center"
             android:padding="3dp" />
-        <!--            android:background="@drawable/select_lang_border"-->
 
         <TextView
             android:id="@+id/translated_heading"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_margin="15dp"
-            android:text="Translated Text"
+            android:text="@string/translated_text_pointer"
             android:textSize="28sp" />
     </LinearLayout>
 
@@ -102,25 +102,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Tap on the blue button to translate"
+        android:text="@string/usage_instructer"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
-<!--        android:layout_width="60dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:layout_marginTop="100dp"-->
-<!--        android:layout_marginEnd="30dp"-->
-<!--        android:layout_marginBottom="30dp"-->
-<!--        android:background="@drawable/round_button"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"-->
-<!--        app:srcCompat="@android:drawable/ic_menu_recent_history" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

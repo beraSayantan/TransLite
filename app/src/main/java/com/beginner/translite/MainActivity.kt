@@ -10,6 +10,8 @@ import android.view.View
 import android.widget.*
 import com.beginner.translite.databinding.Screen1Binding
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.google.mlkit.common.model.DownloadConditions
 import com.google.mlkit.nl.languageid.LanguageIdentification
 import com.google.mlkit.nl.translate.TranslateLanguage
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mProgressDialog: Dialog
     private lateinit var binding:Screen1Binding
-
+    private lateinit var translate_query:TransQuery
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -113,6 +115,8 @@ class MainActivity : AppCompatActivity() {
         translator.translate(inputtext.text.toString())
             .addOnSuccessListener { translatedText ->
                 translatedheading.text = translatedText
+                translate_query = TransQuery(inputtext.text.toString(),translatedText)
+                Firebase.firestore.collection("Data").add(translate_query)
             }
             .addOnFailureListener { exception ->
             }

@@ -7,6 +7,12 @@ plugins {
 android {
     compileSdk 32
 
+    configurations {
+        implementation.exclude module:'proto-google-common-protos'
+        implementation.exclude module:'protolite-well-known-types'
+        implementation.exclude module:'protobuf-lite'
+    }
+
     defaultConfig {
         applicationId "com.beginner.translite"
         minSdk 26
@@ -43,6 +49,10 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    //for firestore
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.2.1'
+
     // dependency for firebase core.
     implementation 'com.google.firebase:firebase-core:21.1.0'
 
@@ -51,6 +61,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-natural-language-language-id-model:20.0.8'
     implementation 'com.google.mlkit:translate:17.0.0'
     implementation 'com.google.mlkit:language-id:17.0.4'
+    implementation 'androidx.annotation:annotation:1.4.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
