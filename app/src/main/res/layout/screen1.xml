@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_background_panchuta"
     android:orientation="vertical"
-    tools:context=".MainActivity"
->
+    android:visibility="visible"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/translite"
@@ -81,20 +82,23 @@
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_margin="15dp"
+            android:background="@drawable/simple_border"
+            android:backgroundTint="@android:color/holo_blue_light"
             android:text="@string/translated_text_pointer"
-            android:textSize="28sp" />
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:padding="10dp"/>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_marginHorizontal="15dp"
+        android:alpha="0.25"
         android:background="#c0c0c0"
         app:layout_constraintBottom_toBottomOf="@id/linearLayout2"
         app:layout_constraintRight_toRightOf="@id/linearLayout2"
-        app:layout_constraintTop_toTopOf="@id/linearLayout2"
-        android:alpha="0.25"
-        />
+        app:layout_constraintTop_toTopOf="@id/linearLayout2" />
 
 
     <TextView
@@ -107,7 +111,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
