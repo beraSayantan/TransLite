@@ -29,59 +29,57 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
+        android:layout_margin="10dp"
         android:background="@drawable/customborder"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="15dp"
         android:gravity="center"
-        >
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="15dp">
 
-        <TextView
-            android:id="@+id/textView6"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_text"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="120dp"
             android:layout_margin="15dp"
-            android:text="Enter text to be translated here"
+            android:gravity="top"
+            android:hint="Enter text to be translated"
             android:textSize="28sp" />
 
         <TextView
+            android:id="@+id/selected_lang"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="AUTO DETECT"
             android:layout_margin="15dp"
-            android:textSize="16sp"
             android:padding="5dp"
+            android:text="AUTO DETECT"
             android:textAlignment="center"
-            />
+            android:textSize="16sp" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/translate_button"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
+            android:layout_margin="15sp"
             android:background="@drawable/round_button"
             android:contentDescription="Translate"
             android:gravity="center"
-            app:srcCompat="@drawable/translation"
-            android:layout_margin="15sp"
-            />
+            app:srcCompat="@drawable/translation" />
 
         <Spinner
             android:id="@+id/lang_to"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:entries="@array/languages"
-            android:padding="3dp"
-            android:gravity="center"
             android:layout_margin="15dp"
-            />
+            android:entries="@array/languages"
+            android:gravity="center"
+            android:padding="3dp" />
+        <!--            android:background="@drawable/select_lang_border"-->
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/translated_heading"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="120dp"
             android:layout_margin="15dp"
             android:text="Translated Text"
             android:textSize="28sp" />
@@ -110,19 +108,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/round_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:srcCompat="@android:drawable/ic_menu_recent_history" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:background="@drawable/round_button"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_recent_history" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

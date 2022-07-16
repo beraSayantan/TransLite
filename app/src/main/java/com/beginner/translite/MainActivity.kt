@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         var to_lang:String
         lateinit var to_code:String
         val inputtext:TextInputEditText = findViewById(R.id.input_text)
-        val translatebutton:Button = findViewById(R.id.translate_button)
+        val translatebutton:ImageButton = findViewById(R.id.translate_button)
         val translatedheading:TextView = findViewById(R.id.translated_heading)
 
         langto.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
