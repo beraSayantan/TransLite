@@ -19,7 +19,10 @@
 
         <activity
             android:name=".SplashScreen"
-            android:exported="true">
+            android:exported="true"
+
+            android:theme="@style/Theme.AppCompat.NoActionBar">             //to make a single screen sans actionBar
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
