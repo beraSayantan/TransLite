@@ -16,19 +16,12 @@
         android:visibility="visible"
         tools:context=".MainActivityCopy">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="42dp"
-            android:textAlignment="center"
-            />
 
         <fragment
             android:id="@+id/NavHostFragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="match_parent"
             app:navGraph="@navigation/navigation"
             app:defaultNavHost="true"
             />
