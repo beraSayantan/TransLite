@@ -30,8 +30,9 @@ android {
         }
     }
 
-    buildFeatures {
-        viewBinding = true
+
+    dataBinding{
+        android.buildFeatures.dataBinding=true
     }
 
     compileOptions {
@@ -44,6 +45,10 @@ android {
 }
 
 dependencies {
+
+    //dependency for fragment
+    implementation("androidx.fragment:fragment-ktx:1.5.0")
+
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
