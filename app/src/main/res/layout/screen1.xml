@@ -1,116 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/ic_background_panchuta"
-    android:orientation="vertical"
-    android:visibility="visible"
-    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/translite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="82dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="745dp"
-        android:fontFamily="sans-serif"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<layout>
 
+    <data>
+
+        </data>
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/customborder"
-        android:gravity="center"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_background_panchuta"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="15dp">
+        android:visibility="visible"
+        tools:context=".MainActivityCopy">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/input_text"
+
+        <fragment
+            android:id="@+id/NavHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_margin="15dp"
-            android:gravity="top"
-            android:hint="@string/requesting_toenter_text"
-            android:textSize="28sp" />
-
-        <TextView
-            android:id="@+id/selected_lang"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:padding="5dp"
-            android:text="@string/auto_detect"
-            android:textAlignment="center"
-            android:textSize="16sp" />
-
-        <ImageButton
-            android:id="@+id/translate_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="15sp"
-            android:background="@drawable/round_button"
-            android:contentDescription="@string/translate"
-            android:gravity="center"
-            app:srcCompat="@drawable/translation" />
-
-        <Spinner
-            android:id="@+id/lang_to"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:entries="@array/languages"
-            android:gravity="center"
-            android:padding="3dp" />
-
-        <TextView
-            android:id="@+id/translated_heading"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_margin="15dp"
-            android:background="@drawable/simple_border"
-            android:backgroundTint="@android:color/holo_blue_light"
-            android:text="@string/translated_text_pointer"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            android:padding="10dp"/>
+            android:layout_height="match_parent"
+            app:navGraph="@navigation/navigation"
+            app:defaultNavHost="true"
+            />
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginHorizontal="15dp"
-        android:alpha="0.25"
-        android:background="#c0c0c0"
-        app:layout_constraintBottom_toBottomOf="@id/linearLayout2"
-        app:layout_constraintRight_toRightOf="@id/linearLayout2"
-        app:layout_constraintTop_toTopOf="@id/linearLayout2" />
-
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/usage_instructer"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

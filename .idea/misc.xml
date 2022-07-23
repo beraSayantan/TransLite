@@ -7,6 +7,7 @@
         <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.185" />
         <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/drawable/customborder.xml" value="0.185" />
         <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/drawable/divider.xml" value="0.185" />
+        <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.184" />
         <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/drawable/ic_launcher_background.xml" value="0.185" />
         <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/drawable/ic_mic.xml" value="0.229" />
         <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/drawable/ic_right_arrow.xml" value="0.185" />
@@ -15,7 +16,15 @@
         <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
         <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/dialog_progress.xml" value="0.15172101449275363" />
+        <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/fragment_about.xml" value="0.1838768115942029" />
+        <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/fragment_blank.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/fragment_history.xml" value="0.2" />
+        <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/fragment_trans.xml" value="0.4" />
+        <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/history_cardview.xml" value="0.2171875" />
+        <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/navigation.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/screen1.xml" value="0.264" />
+        <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/layout/screen1_copy.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Shashank Rana/AndroidStudioProjects/SayantanTransLite/TransLite/app/src/main/res/menu/overflow_menu.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/drawable/ic_mic.xml" value="0.1875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/to_spinner_languages.xml" value="0.26268115942028986" />

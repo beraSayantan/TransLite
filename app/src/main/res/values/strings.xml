@@ -35,7 +35,10 @@
     <string name="requesting_toenter_text">Enter text to be translated</string>
     <string name="auto_detect">AUTO DETECT</string>
     <string name="translate">Translate</string>
-    <string name="translated_text_pointer">Translated Text</string>
+    <string name="translated_text_pointer">Translated Text \n \n </string>
     <string name="usage_instructer">Tap on the blue button to translate</string>
     <string name="requesting_patience">Please Wait</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us">Hello, we are team_мстители. We hope you liked the app. \nFor any support or feedback contact: \nShashank Rana \nshashankrana108@outlook.com</string>
 </resources>
