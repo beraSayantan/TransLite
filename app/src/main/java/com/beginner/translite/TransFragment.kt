@@ -86,7 +86,7 @@ class TransFragment : Fragment() {
         return binding.root
     }
 
-    override fun onAttach(context: Context) {
+    override fun onAttach(context: Context) {               //Fragment me context lene ki meri indigenous ninja technique
         currContext = context;
         super.onAttach(context)
     }
@@ -137,6 +137,7 @@ class TransFragment : Fragment() {
                 translatedheading.text = translatedText
                 binding.translatedHeading.visibility= View.VISIBLE
                 translate_query = TransQuery(inputtext.text.toString(),translatedText)
+                storeData(inputtext.text.toString(),translatedText)
             }
             .addOnFailureListener { exception ->
             }
@@ -194,6 +195,12 @@ class TransFragment : Fragment() {
             "ur" -> return "URDU"
         }
         return ""
+    }
+
+    fun storeData(input:String, output:String){
+
+        var transQuery = TransQuery(input,output)
+        Database.history.add( Database.history.size , transQuery)
     }
 
 
