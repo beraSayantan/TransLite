@@ -78,8 +78,8 @@ class TransFragment : Fragment() {
                     }
                 }
                 .addOnFailureListener {
-                    // Model couldn’t be loaded or other internal error.
-                    // ...
+                    Toast.makeText(currContext
+                        , "Can't identify language", Toast.LENGTH_LONG).show()
                 }
         }
 
