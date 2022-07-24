@@ -1,5 +1,5 @@
 # TransLite
-Revived Hackathon 1
+A simple yet powerful translation app.
 
 ---
 
@@ -13,6 +13,13 @@ This project has implementation of concepts like ViewBinding, APIs,  as well as 
 
 ### Screenshots
 
-<img width="282" alt="Screenshot 2022-07-16 at 23 53 16" src="https://user-images.githubusercontent.com/100575697/179367609-95df1c95-d952-471b-9c09-34a434bfaf1e.png">
 
-<img width="282" alt="Screenshot 2022-07-16 at 23 56 15" src="https://user-images.githubusercontent.com/100575697/179367616-8415ef92-b5ee-47b5-8fbc-95299c640aa7.png">
+![2022-07-24_11-44-01_665](https://user-images.githubusercontent.com/101785829/180635015-63a3b7f7-22b9-4aea-8610-c4fe7c530b73.jpg)
+
+---
+
+![Screenshot_2022-07-24-11-39-52-583_com beginner translite](https://user-images.githubusercontent.com/101785829/180635021-f014fe96-58be-4cf0-a90a-9edc11d28331.png)
+
+---
+
+![Screenshot_2022-07-24-11-40-55-964_com beginner translite](https://user-images.githubusercontent.com/101785829/180635025-6beeebf5-08c5-4efd-8713-228cef3226c2.png)
