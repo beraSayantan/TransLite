@@ -54,7 +54,6 @@
                     android:textSize="16sp"
                     />
 
-
                 <Spinner
                     android:id="@+id/lang_to"
                     android:layout_width="wrap_content"
@@ -76,6 +75,7 @@
                     android:textColor="@color/white"
                     android:textSize="28sp"
                     android:padding="10dp"/>
+                
             </LinearLayout>
 
             <View
@@ -83,33 +83,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginHorizontal="15dp"
-                android:alpha="0.25"
+                android:alpha="1"
                 android:background="@color/ic_bg_variant"
                 app:layout_constraintBottom_toBottomOf="@id/linearLayout2"
                 app:layout_constraintRight_toRightOf="@id/linearLayout2"
                 app:layout_constraintTop_toTopOf="@id/linearLayout2" />
 
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/translate_button"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:src="@drawable/ic_baseline_translate_24"
-                android:tint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_baseline_translate_24"
+                app:iconTint="@color/white"
+                app:iconSize="32dp"
+                android:text="@string/translate_btn_text"
+                android:textSize="18sp"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.868"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.784"
-                android:contentDescription="Translate"
+                android:contentDescription="@string/translate_btn_text"
                 android:backgroundTint="@color/ic_bg_variant"
-                app:tint="@color/white"
-                app:layout_gravity ="center"
+
                 />
 <!--Only app:tint will change the color of the icon, not android:tint-->
-
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
