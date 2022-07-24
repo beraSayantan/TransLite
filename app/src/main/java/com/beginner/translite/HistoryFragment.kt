@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,6 +25,8 @@ class HistoryFragment : Fragment() {
 
         val binding = DataBindingUtil.inflate<FragmentHistoryBinding>(inflater
             ,R.layout.fragment_history,container,false)
+
+        (activity as AppCompatActivity).supportActionBar?.title = "Recent"
 
         binding.rvHistory.adapter = HistoryAdapter(currContext, Database.history)
 

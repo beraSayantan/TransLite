@@ -1,117 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
     </data>
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="10dp"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:fillViewport="true"
+        android:background="@drawable/customborder"
         >
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/ic_background_panchuta"
             android:orientation="vertical"
             android:visibility="visible"
-            tools:context=".MainActivity">
+            tools:context=".MainActivity"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
 
-            <LinearLayout
-                android:id="@+id/linearLayout2"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_text"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:hint="@string/requesting_toenter_text"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.044" />
+
+            <TextView
+                android:id="@+id/selected_lang"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/auto_detect"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.508"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.268" />
+
+
+            <Spinner
+                android:id="@+id/lang_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/languages"
+                android:gravity="center"
+                android:padding="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.382" />
+
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/customborder"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="15dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_margin="15dp"
-                    android:gravity="top"
-                    android:hint="@string/requesting_toenter_text"
-                    android:textSize="28sp"
-                    android:layout_weight="1"/>
-
-                <TextView
-                    android:id="@+id/selected_lang"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:padding="5dp"
-                    android:text="@string/auto_detect"
-                    android:textAlignment="center"
-                    android:textSize="16sp"
-                    />
-
-                <ImageButton
-                    android:id="@+id/translate_button"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="15sp"
-                    android:background="@drawable/round_button"
-                    android:contentDescription="@string/translate"
-                    android:gravity="center"
-                    app:srcCompat="@drawable/translation" />
-
-                <Spinner
-                    android:id="@+id/lang_to"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:entries="@array/languages"
-                    android:gravity="center"
-                    android:padding="3dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lang_to"
+                app:layout_constraintVertical_bias="0.141"
+                >
 
                 <TextView
                     android:id="@+id/translated_heading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
                     android:layout_weight="3"
                     android:background="@drawable/simple_border"
                     android:backgroundTint="@color/ic_bg_color"
+                    android:padding="10dp"
                     android:text="@string/translated_text_pointer"
                     android:textColor="@color/white"
-                    android:textSize="28sp"
-                    android:padding="10dp"/>
-            </LinearLayout>
+                    android:textSize="28sp"/>
+
+            </ScrollView>
 
             <View
+                android:id="@+id/view"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginHorizontal="15dp"
-                android:alpha="0.25"
-                android:background="#c0c0c0"
-                app:layout_constraintBottom_toBottomOf="@id/linearLayout2"
-                app:layout_constraintRight_toRightOf="@id/linearLayout2"
-                app:layout_constraintTop_toTopOf="@id/linearLayout2" />
-
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="@string/usage_instructer"
-                android:textSize="16sp"
+                android:alpha="1"
+                android:background="@color/ic_bg_variant"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.51"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.327" />
 
+
+            <!--Only app:tint will change the color of the icon, not android:tint-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/translate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="504dp"
+            android:backgroundTint="@color/ic_bg_variant"
+            android:contentDescription="@string/translate_btn_text"
+            android:text="@string/translate_btn_text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:icon="@drawable/ic_baseline_translate_24"
+            app:iconSize="32dp"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.862"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

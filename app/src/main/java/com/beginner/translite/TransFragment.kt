@@ -7,6 +7,7 @@ import android.view.*
 import android.widget.AdapterView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -33,6 +34,8 @@ class TransFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.app_name)
 
                                                                                     //COPIED BLOCK STARTs here BEWARE
 
